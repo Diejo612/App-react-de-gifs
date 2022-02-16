@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
 
-  const [query, setQuery] = useState("homer thinking");
+  const [query, setQuery] = useState("papa rellena");
   const [gif, setGif] = useState({
     type: "gif",
     id: "a93jwI0wkWTQs",
@@ -207,7 +207,7 @@ function App() {
 
   useEffect(() => {
     const key = "RPtacaw5MXBnnOFRDdNvb54GjjSc9x03";
-    const endpoint = `https://api.giphy.com/v1/gifs/search?api_key=${key}&q=${query}&limit=15&offset=0&rating=g&lang=en`;
+    const endpoint = `https://api.giphy.com/v1/gifs/search?api_key=${key}&q=${query}&limit=15&offset=0&rating=g&lang=es`;
     fetch(endpoint).then(response => response.json()).then(data => setResults(data.data))
   },[query])
 
